@@ -1,0 +1,31 @@
+body {
+    margin: 0 auto;
+}
+
+.flex-content{
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+h1 {
+    margin-top: 25px;
+}
+
+h1 .center {
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.red-text {
+    color: red;
+}
+
+.green-text {
+    color: green;
+}
+.full-width {
+    width: 100%;
+}
