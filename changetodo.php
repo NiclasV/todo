@@ -22,6 +22,16 @@
         echo '</pre>';
     }
 
+    $delete = $pdo->prepare("DELETE FROM todos WHERE id = :id");
+
+    if(($_POST["radiobox-" . $id]) == "delete"){
+        echo "tjo nåt ska tas bort";
+        $delete->execute();
+    }
+    if(($_POST["radiobox-" . $id]) == "done"){
+        echo "tjo nåt ska bli klart nu";
+    }
+
 echo '<pre>';
 var_dump($_POST);
 echo '</pre>';

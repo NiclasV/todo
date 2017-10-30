@@ -7,6 +7,14 @@ body {
     max-width: 960px;
     margin: 0 auto;
     flex-wrap: wrap;
+    margin-top: 20px 0 20px 0;
+}
+
+.green {
+    background: lightgreen;
+    padding: 20px;
+    margin-top: 20px;
+
 }
 
 h1 {
