@@ -1,0 +1,53 @@
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.blue {
+    background: darkslateblue;
+    padding: 10px;
+    color: white;
+}
+
+h1 {
+    margin: 52px 0 20px 0;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    background: darkslateblue;
+    height: 150px;
+}
+
+.footer-flex {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: white;
+
+    a {
+        color: lightgrey;
+        font-weight: 800;
+    }
+}
+
