@@ -11,5 +11,5 @@ if (isset($_GET['id'])){
     //Execute prepared statement
     $delete = $statement->execute();
 }
-header("Location: index.php?result=$delete");
+header("Location: index.php");
 ?>

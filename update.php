@@ -11,5 +11,5 @@ if (isset($_GET['id'])){
     //Execute prepared statement
     $update = $statement->execute();
 }
-header("Location: index.php?result=$update");
+header("Location: index.php");
 ?>

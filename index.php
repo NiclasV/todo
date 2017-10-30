@@ -8,30 +8,29 @@
 
 <body>
 
-        <!-- SECOND FORM FOR ADDING DATA -->    
-        <div class="flex-content green">
+    <!-- SECOND FORM FOR ADDING DATA -->    
+    <div class="flex-container blue">
     <h1 class="center full-width">Another one!</h1>
-
-    <form action="addtodo.php" method="POST"> <!-- send data to seperate PHP file for adding to database -->
-        <field><input type="text" name="namn" placeholder="Name"></field>
-        <field><input type="text" name="todo" placeholder="WhatchaWonDo?"></field>
-        <field><input type="submit" name="add-todo" value="Add it!"></field>
-    </form>
+        <form action="addtodo.php" method="POST" class="center full-width"> <!-- send data to seperate PHP file for adding to database -->
+            <field><input type="text" name="namn" placeholder="Name"></field>
+            <field><input type="text" name="todo" placeholder="WhatchaWonDo?"></field>
+            <field><input type="submit" name="add-todo" value="Add it!"></field>
+        </form>
+        <?php
+        // take action on resulting database insertion
+        if (isset($_GET["result"])) {
+            echo "Added a new todo sucessfully!!";
+        } else {
+            echo "";
+        }
+        ?>
     </div>
 
-    <div class="flex-content">
+    <div class="flex-container">
 
     <h1 class="center full-width">List of things to do</h1>
     
-    <?php
-    // take action on resulting database insertion
-    if (isset($_GET["result"])) {
-        echo "DB operation succes!";
-    } else {
-        echo "DB operation has error!!!!";
-    }
-    ?>
-    
+
     <?php
     
     //Få ut data från databasen i en tabell: 
@@ -72,7 +71,7 @@
     </form>
     </div>
 
-    <div class="flex-content">
+    <div class="flex-container">
     <h1 class="center full-width">Completed Todo's</h1>
 
     <?php
@@ -105,7 +104,19 @@
     ?>
     </div>
 
+    <footer>
+        <div class="flex-container center">
+           <div class="footer-flex">
+            <p> Github username: <a href="https://github.com/NiclasV" target="_blank">NiclasV</a> </p>
+            <p> Github repository: <a href="https://github.com/NiclasV/todo" target="_blank">NiclasV/todo/</a> </p>
+           </div>
+        </div>
+    </footer>
+
+    
     <?php
+    //DONT NEED THIS NO MORE! PHEW!
+    die;
     //Printar ut columner och rows som en associative array, for debugging purposes
     echo "<pre>\n";
     $stmt = $pdo->query("SELECT id, title, completed, createdBy FROM todos");
@@ -114,6 +125,9 @@
     }
     echo "</pre>\n";
     ?>
+
+
+
 
 </body>
 </html>  
