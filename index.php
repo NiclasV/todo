@@ -26,9 +26,9 @@
     <?php
     // take action on resulting database insertion
     if (isset($_GET["result"])) {
-        echo "Insert succes!!!!";
+        echo "DB operation succes!";
     } else {
-        echo "";
+        echo "DB operation has error!!!!";
     }
     ?>
     
@@ -62,12 +62,10 @@
         echo ($row['createdBy']);
         echo '</td><td>';
         echo '<form method="POST" action="update.php?id=' . $row['id'] . '">';
-        echo '<field><button type="submit" class="btn btn-success" name="' . $row['id'] . 
-        '" value="done">Done!</button></field></form>';
+        echo '<field><button type="submit" class="btn btn-success" name="' . $row['id'] . '" value="done">Done!</button></field></form>';
         echo '</td><td>';
         echo '<form method="POST" action="delete.php?id=' . $row['id'] . '">';
-        echo '<field><button type="submit" class="btn btn-danger" name="delete-' . $row['id'] . 
-        '" value="delete">Delete</button></field></form>';
+        echo '<field><button type="submit" class="btn btn-danger" name="delete-' . $row['id'] . '" value="delete">Delete</button></field></form>';
     }
     echo '</td></tr></table>';
     ?>
@@ -118,6 +116,4 @@
     ?>
 
 </body>
-</html>   
-
-//header(location: index.php) <<skickar tillbaka till första sidan>>
+</html>  
